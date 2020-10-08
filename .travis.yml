@@ -140,6 +140,7 @@ jobs:
               /usr/local/bin/gtimeout 40m /usr/local/bin/cmake $@
           }
       install:
+        - brew update
         - brew install ccache
         - brew upgrade boost
         - brew install boost-python3
