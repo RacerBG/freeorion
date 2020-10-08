@@ -122,10 +122,11 @@ jobs:
         - cmake -DBUILD_HEADLESS=ON -DBUILD_TESTING=ON ..
         - cmake --build .
 
+    # should support macOS 10.14.6
     - name: Build FreeOrion on MacOS
       stage: build
       os: osx
-      #osx_image: xcode9.4.1
+      osx_image: xcode11.3
       language: cpp
       compiler: clang
       cache: ccache
